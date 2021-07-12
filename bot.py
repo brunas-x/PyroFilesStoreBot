@@ -50,7 +50,9 @@ async def start(bot: Client, cmd: Message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    InlineKeyboardButton("About Bot", callback_data="aboutbot")
+                    [
+                        InlineKeyboardButton("About Bot", callback_data="aboutbot")
+                    ]
                 ]
             )
         )
@@ -111,7 +113,7 @@ async def main(bot: Client, message: Message):
                 f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    [InlineKeyboardButton("Open Link", url=share_link)]
+                    [[InlineKeyboardButton("Open Link", url=share_link)]]
                 ),
                 disable_web_page_preview=True
             )
@@ -302,7 +304,9 @@ async def button(bot: Client, cmd: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    InlineKeyboardButton("Go Home", callback_data="gotohome")
+                    [
+                        InlineKeyboardButton("Go Home", callback_data="gotohome")
+                    ]
                 ]
             )
         )
