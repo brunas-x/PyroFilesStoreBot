@@ -144,7 +144,7 @@ async def main(bot: Client, message: Message):
                 )
             )
     elif message.chat.type == "channel":
-        if (message.chat.id == Config.LOG_CHANNEL) or (message.chat.id == int(Config.UPDATES_CHANNEL)) or message.forward_from_chat or message.forward_from:
+        if (message.chat.id == Config.LOG_CHANNEL) or (message.chat.id == Config.UPDATES_CHANNEL) or message.forward_from_chat or message.forward_from:
             return
         elif int(message.chat.id) in Config.BANNED_CHAT_IDS:
             await bot.leave_chat(message.chat.id)
